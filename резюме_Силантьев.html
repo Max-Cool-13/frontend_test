@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Резюме - Силантьев Максим Сергеевич</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #28c777;
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #28c777;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .about, .contact {
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #28c777;
+            margin-bottom: 10px;
+        }
+
+        .empty-field {
+            color: #dc3545;
+            font-style: italic;
+        }
+
+        /* Кнопка для контактов */
+        .contact-button {
+            background-color: #28c777;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .contact-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="https://sun9-12.userapi.com/impg/MgbM0Om1RJpSZdCzWW35o5gcQaf8PddeO7wo0A/huY8J-X6gww.jpg?size=1627x2160&quality=95&sign=92d4051321871900eb945a2b51afd88b&type=album" alt="Фото" class="profile-photo">
+            <h1>Силантьев Максим Сергеевич</h1>
+	    <p>Институт электроники и светотехники</p>
+            <p>4 курс информатики и вычислительной техники</p>
+            <p>Уровень английского: B1-A2</p>
+        </div>
+        <div class="about">
+            <h2>Цели посещения курсов</h2>
+            <p>Изучить, какой frontend сейчас необходим на рынке</p>
+            <h2>Откуда узнал про курс</h2>
+            <p>Рассылка в университете</p>
+        </div>
+        <div class="contact">
+            <h2>Контактная информация</h2>
+            <p>Почта: max-cool-2003@mail.ru</p>
+            <p>Номер телефона: 89297460777</p>
+            <a href="https://t.me/max_cool_13" class="contact-button">Написать сообщение</a>
+        </div>
+    </div>
+</body>
+</html>
