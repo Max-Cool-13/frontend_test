@@ -1,58 +1,69 @@
-import React from 'react';
-import background1 from '../assets/bg1.jpg';
-import background2 from '../assets/bg2.jpg';
-import background3 from '../assets/bg3.jpg';
+import React from "react";
+import background1 from "../assets/bg1.jpg";
+import background2 from "../assets/bg2.jpg";
+import background3 from "../assets/bg3.jpg";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="relative min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Фон с изображениями */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="w-full h-full grid grid-cols-3 gap-1">
-          {[background1, background2, background3].map((img, i) => (
+    <div className="text-white bg-black min-h-screen">
+      {/* Верхний фон из трёх изображений */}
+      <div className="relative h-screen overflow-hidden">
+        <div className="absolute inset-0 flex">
+          {[background1, background2, background3].map((img, index) => (
             <img
-              key={i}
+              key={index}
               src={img}
-              alt="bg"
-              className="w-full h-full object-cover blur-sm grayscale brightness-75"
+              alt={`bg-${index}`}
+              className="w-1/3 h-full object-cover opacity-30 grayscale blur-sm brightness-50"
             />
           ))}
         </div>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg">
+            Барбершоп N1
+          </h1>
+          <p className="mt-4 text-xl md:text-2xl drop-shadow">
+            Стиль начинается с тебя
+          </p>
+          <a
+            href="/booking"
+            className="mt-6 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition shadow-lg"
+          >
+            Записаться
+          </a>
+        </div>
       </div>
 
-      {/* Навигация */}
-      <header className="z-10 relative w-full flex justify-between items-center px-6 py-4 bg-black/70 backdrop-blur-md shadow-md">
-        <h1 className="text-2xl font-bold text-white">Барбершоп N1</h1>
-        <nav className="hidden md:flex gap-6">
-          <a href="/" className="hover:text-gray-300">Главная</a>
-          <a href="/services" className="hover:text-gray-300">Услуги</a>
-          <a href="/about" className="hover:text-gray-300">О нас</a>
-          <a href="/contact" className="hover:text-gray-300">Контакты</a>
-        </nav>
-        <button className="md:hidden text-white">☰</button>
-      </header>
+      {/* Модули под фоном */}
+      <div className="grid md:grid-cols-2 gap-6 p-6">
+        <img
+          src={background2}
+          alt="cut"
+          className="rounded-lg shadow-lg object-cover w-full h-64"
+        />
+        <div>
+          <h2 className="text-3xl font-semibold mb-4">Наши мастера</h2>
+          <p className="text-lg text-gray-300">
+            Профессионалы своего дела. Доверь свою стрижку лучшим из лучших. Барбершоп N1 — это качество, стиль и атмосфера.
+          </p>
+        </div>
+      </div>
 
-      {/* Контент */}
-      <main className="z-10 relative flex flex-col items-center justify-center text-center px-4 mt-20">
-        <h2 className="text-4xl md:text-6xl font-bold mb-4">
-          Красота начинается здесь
-        </h2>
-        <p className="text-lg md:text-xl max-w-xl">
-          Добро пожаловать в барбершоп N1 — уютное место, где профессионализм
-          и стиль идут рука об руку.
-        </p>
-        <a
-          href="/signup"
-          className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 transition"
-        >
-          Записаться
-        </a>
-      </main>
-
-      {/* Футер */}
-      <footer className="z-10 relative mt-20 text-center py-4 text-gray-400">
-        © 2025 Барбершоп N1. Все права защищены.
-      </footer>
+      <div className="relative h-96 my-12">
+        <img
+          src={background3}
+          alt="bg"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center text-white flex flex-col items-center justify-center h-full px-4">
+          <h2 className="text-3xl font-bold drop-shadow">Скидка 20% новым клиентам</h2>
+          <p className="mt-2 text-lg drop-shadow">Только в этом месяце</p>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
