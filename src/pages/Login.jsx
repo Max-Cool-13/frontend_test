@@ -1,31 +1,12 @@
-import React from "react";
-
-const Login = () => {
+export default function Login() {
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-gray-900 p-8 rounded shadow-lg">
-        <h2 className="text-3xl font-bold mb-6 text-center drop-shadow">Вход</h2>
-        <form className="space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-          <input
-            type="password"
-            placeholder="Пароль"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-          <button
-            type="submit"
-            className="w-full py-2 rounded bg-red-600 hover:bg-red-700 transition shadow"
-          >
-            Войти
-          </button>
-        </form>
-      </div>
+    <div className="min-h-screen flex items-center justify-center bg-black text-white px-4">
+      <form className="bg-gray-800 p-8 rounded shadow-md w-full max-w-md">
+        <h1 className="text-3xl font-bold mb-6 text-center">Вход</h1>
+        <input type="email" placeholder="Email" className="w-full mb-4 px-4 py-2 rounded bg-gray-700 text-white" />
+        <input type="password" placeholder="Пароль" className="w-full mb-6 px-4 py-2 rounded bg-gray-700 text-white" />
+        <button className="w-full bg-red-600 hover:bg-red-700 py-2 rounded">Войти</button>
+      </form>
     </div>
   );
-};
-
-export default Login;
+}
